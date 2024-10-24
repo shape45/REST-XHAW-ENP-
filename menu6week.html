@@ -1,0 +1,41 @@
+<html>
+<head>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+        }
+    </style>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+
+        function goNext() {
+            window.location.href = 'nextPage.html'; // Change this to your desired next page URL
+        }
+
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+    </script>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-blue-900 h-screen flex flex-col justify-between items-center p-4">
+    <div class="w-full flex justify-between items-center">
+        <h1 class="text-white text-xl">6-Week Courses</h1>
+        <button class="bg-gray-700 text-gray-300 px-4 py-2 rounded-full" onclick="goBack()">Back</button>
+    </div>
+    <div class="flex flex-col space-y-4">
+        <button class="bg-gray-600 text-gray-300 px-6 py-2 rounded" onclick="scrollToSection('childMinding')">Child Minding</button>
+        <button class="bg-gray-600 text-gray-300 px-6 py-2 rounded" onclick="scrollToSection('cooking')">Cooking</button>
+        <button class="bg-gray-600 text-gray-300 px-6 py-2 rounded" onclick="scrollToSection('gardenMaintenance')">Garden Maintenance</button>
+    </div>
+    <button class="bg-black text-white px-8 py-2 rounded-full" onclick="goNext()">Next</button>
+
+  
+</body>
+</html>
